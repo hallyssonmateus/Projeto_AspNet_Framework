@@ -4,6 +4,16 @@
 
 Sejam muito bem-vindos! O objetivo deste projeto é criar um simulador de seguros web básico utilizando **.NET Framework 4.8** e **Web Forms**. A aplicação permite ao usuário inserir seus dados pessoais, escolher um tipo de seguro, e exibe um valor estimado para o seguro selecionado. Este projeto visa aplicar conceitos de programação web e criar uma interface intuitiva para o usuário.
 
+## Formulário
+
+<img src='print1.PNG' width="1205" height="720">
+
+## Resultado
+
+E aqui está o resultado da simulação:
+
+<img src='print2.PNG' width="1205" height="720">
+
 ## Funcionalidades Implementadas
 
 ### 1. Página Mestra
