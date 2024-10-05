@@ -26,6 +26,7 @@ namespace WebApplication1
             string nome = TextBox1.Text.Trim();
             string dataNascimentoStr = TextBox2.Text.Trim();
             string cpf = TextBox3.Text.Trim();
+            string tiposeguroSelecionado = DropDownList1.SelectedValue;
 
             // Validação de campos obrigatórios
             if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(dataNascimentoStr) || string.IsNullOrEmpty(cpf))
@@ -52,7 +53,10 @@ namespace WebApplication1
             }
 
             // Se todas as validações passarem, redireciona para a página de resultados
-            Response.Redirect("Resultado.aspx?nome=" + Server.UrlEncode(nome) + "&cpf=" + Server.UrlEncode(cpf) + "&datanascimento=" + Server.UrlEncode(dataNascimentoStr));
+            Response.Redirect("Resultado.aspx?nome=" + Server.UrlEncode(nome) +
+    "&cpf=" + Server.UrlEncode(cpf) +
+    "&datanascimento=" + Server.UrlEncode(dataNascimentoStr) +
+    "&tiposeguro=" + Server.UrlEncode(tiposeguroSelecionado));
         }
 
         private static bool ValidarCPF(string cpf)

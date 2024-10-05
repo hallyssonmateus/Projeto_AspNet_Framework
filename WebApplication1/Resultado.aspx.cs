@@ -12,12 +12,17 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var form = Request.Form;
-            var concat = "ctl00$ContentPlaceHolder1$";
-            var nome = Request.Form[concat + "TextBox1"];
-            var datanascimento = Request.Form[concat + "TextBox2"];
-            var cpf = Request.Form[concat + "TextBox3"];
-            var tiposeguro = form[concat + "DropDownList1"];
+            //var form = Request.Form;
+            //var concat = "ContentPlaceHolder1_";
+            //var nome = Request.Form[concat + "TextBox1"];
+            //var datanascimento = Request.Form[concat + "TextBox2"];
+            //var cpf = Request.Form[concat + "TextBox3"];
+            //var tiposeguro = form[concat + "DropDownList1"];
+
+            string nome = Request.QueryString["nome"];
+            string datanascimento = Request.QueryString["datanascimento"];
+            string cpf = Request.QueryString["cpf"];
+            string tiposeguro = Request.QueryString["tiposeguro"];
 
             LabelNome.Text = "Olá " + nome;
             LabelCPF.Text = "CPF: " + cpf;

@@ -9,23 +9,27 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
-
-.gradient-background {
     background: linear-gradient(to right, #8a6bd1, #7665c5, #625eb8, #4f57ab, #3c509e, #514b94, #5f468a, #68427f, #824371, #914963, #975458, #976152);
     margin: 0;
     padding: 0;
     padding-top: 0;
     height: 100%;
+/*    align-items: center;*/
+}
+
+.gradient-background {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 15px;
 }
 
 h1 {
     font-family: "Poppins", sans-serif;
     margin-top: 0;
     padding-top: 0;
+    color: white;
+    font-weight: 700;
 }
 
 .formulario {
@@ -112,9 +116,10 @@ h1 {
     -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    gap: 10px;
 }
 
-#LabelNome, #LabelCPF, #LabelDataNascimento, #LabelTipoSeguro {
+.LabelNome, .LabelCPF, .LabelDataNascimento, .LabelTipoSeguro {
     margin-bottom: 10px;
     display: block;
     font-family: "Poppins", sans-serif;
@@ -134,3 +139,18 @@ h1 {
 .btn-voltar:hover {
     background-color: #B8860B;
 }
+
+button {
+    background-color: #6495ED;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+    button:hover {
+        background-color: #87CEFA;
+    }
